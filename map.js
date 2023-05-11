@@ -6,8 +6,7 @@ require([
         "esri/widgets/Legend",
         "esri/widgets/Home"
       ], (esriConfig, WebMap, MapView, ScaleBar, Legend, Home) => {
-    esriConfig.apiKey = "AAPK898635d0dbd142cbb73c8ae90939b00dsluSvQqV_ovmXUso6o8UgF9j1ih0fYIesQxWAV3DehJ8-xJopEiysy3ktykd5FxT"
-
+    esriConfig.apiKey = "AAPKa795d958cc3c4e188e53c911afcbb6acpFec45hz6LPXZntUPni-2_4tkxobH-zG_puKsrcE4hY1e_rZhKHFtotTeWGYacF6"
     const webMap = new WebMap({
         portalItem: {
             id: "2430790f3e074b3e92b0fbca99fe4818"
@@ -24,5 +23,19 @@ require([
     })
 
     view.ui.add(homeBtn, "top-left");
+
+    const legend = new Legend({
+        view: view
+    })
+
+    view.ui.add(legend, "bottom-left");
+
+    const scaleBar = new ScaleBar({
+        view: view,
+        unit: "metric",
+        style:"ruler",
+    })
+
+    view.ui.add(scaleBar, "bottom-right");
 
 })
