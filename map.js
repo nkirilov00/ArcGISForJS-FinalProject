@@ -4,8 +4,9 @@ require([
         "esri/views/MapView",
         "esri/widgets/ScaleBar",
         "esri/widgets/Legend",
-        "esri/widgets/Home"
-      ], (esriConfig, WebMap, MapView, ScaleBar, Legend, Home) => {
+        "esri/widgets/Home",
+        "esri/widgets/LayerList"
+      ], (esriConfig, WebMap, MapView, ScaleBar, Legend, Home, LayerList) => {
     esriConfig.apiKey = "AAPKa795d958cc3c4e188e53c911afcbb6acpFec45hz6LPXZntUPni-2_4tkxobH-zG_puKsrcE4hY1e_rZhKHFtotTeWGYacF6"
     const webMap = new WebMap({
         portalItem: {
@@ -37,5 +38,22 @@ require([
     })
 
     view.ui.add(scaleBar, "bottom-right");
+    
+    view.ui.add("layerList-btn", "top-right");
 
+    const layerList = new LayerList ({
+        view: view
+    })
+
+    view.ui.add(layerList, "top-right")
+
+    document
+    .getElementById("layerList")
+    .addEventListener("click", function(){
+        toggleButton ()
+    })
+
+    function toggleButton () {
+        const layerList = document.getElementsByClassName("");
+    }
 })
