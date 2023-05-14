@@ -45,8 +45,8 @@ require([
         view: view
     })
 
+    view.ui.add("basemap-btn", "top-right")   
     view.ui.add(layerList, "top-right")
-    view.ui.add("basemap-btn", "top-right")
 
     document
     .getElementById("layerList-btn")

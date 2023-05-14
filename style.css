@@ -7,7 +7,7 @@
           width: 100%;
       }
 
-      #layerList {
+      #layerList-btn, #basemap-btn {
         padding: 6px;
       }
 
