@@ -49,12 +49,12 @@ require([
 
     document
     .getElementById("layerList-btn")
-    .addEventListener("click", function(){
+    .addEventListener("click", function() {
         toggleButton ()
     })
 
     function toggleButton () {
-        const layerList = document.getElementsByClassName("esri-layer-list")[0];
+        const layerListEl = document.getElementsByClassName("esri-layer-list")[0];
         let currentProp = layerListEl.style.getPropertyValue("display");
 
         layerListEl.style.setProperty("display", currentProp == "block" ? "none" : "block");
