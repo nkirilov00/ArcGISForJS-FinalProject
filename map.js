@@ -39,6 +39,7 @@ require([
 
     view.ui.add(scaleBar, "bottom-right");
     
+    view.ui.add("basemap-btn", "top-right");
     view.ui.add("layerList-btn", "top-right");
 
     const layerList = new LayerList ({
