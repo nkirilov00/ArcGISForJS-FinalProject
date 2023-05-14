@@ -14,3 +14,9 @@
     .esri-component.esri-layer-list.esri-widget.esri-widget--panel{
         display: none;
     }
+
+    .esri-basemap-gallery {
+        position: absolute;
+        top: 40px;        
+        display: none;
+    }
