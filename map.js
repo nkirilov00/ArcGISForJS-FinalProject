@@ -48,12 +48,15 @@ require([
     view.ui.add(layerList, "top-right")
 
     document
-    .getElementById("layerList")
+    .getElementById("layerList-btn")
     .addEventListener("click", function(){
         toggleButton ()
     })
 
     function toggleButton () {
-        const layerList = document.getElementsByClassName("");
+        const layerList = document.getElementsByClassName("esri-layer-list")[0];
+        let currentProp = layerListEl.style.getPropertyValue("display");
+
+        layerListEl.style.setProperty("display", currentProp == "block" ? "none" : "block");
     }
 })
